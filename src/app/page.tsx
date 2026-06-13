@@ -1,103 +1,73 @@
-import Image from "next/image";
+const palette = [
+  { name: "rouge", hex: "#C8102E", label: "Principal", textClass: "text-white" },
+  { name: "rouge-fonce", hex: "#A0152A", label: "Rouge foncé", textClass: "text-white" },
+  { name: "creme", hex: "#FBF6EE", label: "Fond crème", textClass: "text-noir" },
+  { name: "noir", hex: "#1A1714", label: "Texte noir", textClass: "text-white" },
+  { name: "or", hex: "#E3A21A", label: "Accent or", textClass: "text-noir" },
+  { name: "whatsapp", hex: "#25D366", label: "WhatsApp", textClass: "text-white" },
+  { name: "gris-texte", hex: "#6B655C", label: "Gris texte", textClass: "text-white" },
+];
 
-export default function Home() {
+export default function DemoPage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-creme text-noir px-8 py-12 max-w-3xl mx-auto">
+      <h1 className="text-4xl font-bold mb-2">Top Colis Benin</h1>
+      <p className="text-gris-texte mb-12 text-lg">
+        Identité visuelle — démonstration des polices et de la palette.
+      </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Polices */}
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-6 text-rouge">Typographie</h2>
+
+        <div className="mb-6 p-6 rounded-xl border border-border bg-white/40">
+          <p className="text-xs uppercase tracking-widest text-gris-texte mb-3 font-sans">
+            Fraunces — Titres (font-heading)
+          </p>
+          <h3 className="text-5xl font-bold leading-tight font-heading">
+            Livraison rapide
+          </h3>
+          <h3 className="text-3xl font-light mt-1 font-heading">
+            partout au Bénin
+          </h3>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="p-6 rounded-xl border border-border bg-white/40">
+          <p className="text-xs uppercase tracking-widest text-gris-texte mb-3 font-sans">
+            Inter — Corps de texte (font-sans)
+          </p>
+          <p className="font-sans text-base leading-relaxed">
+            Top Colis Benin est votre partenaire de confiance pour l'envoi et la
+            réception de colis au Bénin. Rapide, fiable et accessible, notre service
+            couvre Cotonou et toutes les villes du pays.
+          </p>
+          <p className="font-sans text-sm text-gris-texte mt-3">
+            Texte secondaire — taille sm — couleur grisTexte (#6B655C)
+          </p>
+        </div>
+      </section>
+
+      {/* Palette */}
+      <section>
+        <h2 className="text-2xl font-semibold mb-6 text-rouge">Palette de couleurs</h2>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+          {palette.map(({ name, hex, label, textClass }) => (
+            <div
+              key={name}
+              className={`rounded-xl p-5 flex flex-col justify-between min-h-28 ${textClass}`}
+              style={{ backgroundColor: hex }}
+            >
+              <span className="text-xs font-medium opacity-80 font-sans">
+                {label}
+              </span>
+              <div className="font-sans">
+                <div className="font-bold">{hex}</div>
+                <div className="text-xs opacity-70">bg-{name}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
