@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import WhatsAppFAB from "@/components/layout/WhatsAppFAB";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -15,8 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Top Colis Benin",
-  description: "Service de livraison express au Bénin",
+  title: "Top Colis Benin — Livraison express au Bénin",
+  description:
+    "Envoi et réception de colis partout au Bénin. Agences à Cotonou, Abomey-Calavi et Porto-Novo. Disponible 24h/24.",
 };
 
 export default function RootLayout({
@@ -26,8 +30,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${fraunces.variable} ${inter.variable} antialiased`}>
-        {children}
+      <body className={`${fraunces.variable} ${inter.variable} antialiased flex flex-col min-h-screen`}>
+        <Header />
+        <div className="flex-1">{children}</div>
+        <Footer />
+        <WhatsAppFAB />
       </body>
     </html>
   );
