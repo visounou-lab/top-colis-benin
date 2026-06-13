@@ -14,7 +14,7 @@ type Service = {
 const services: Service[] = [
   {
     slug: "colis",
-    href: "/services#colis",
+    href: "/services/colis",
     title: "Colis",
     description: "Envoi et réception entre villes ou vers l'étranger.",
     iconBg: "bg-rouge/10",
@@ -29,7 +29,7 @@ const services: Service[] = [
   },
   {
     slug: "taxi",
-    href: "/services#taxi",
+    href: "/services/taxi",
     title: "Taxi",
     description: "Transport sécurisé de personnes et de biens.",
     iconBg: "bg-or/15",
@@ -46,7 +46,7 @@ const services: Service[] = [
   },
   {
     slug: "pharma",
-    href: "/services#pharma",
+    href: "/services/pharma",
     title: "Pharma",
     description: "Vos médicaments livrés depuis la pharmacie.",
     iconBg: "bg-rouge/10",
@@ -62,7 +62,7 @@ const services: Service[] = [
   },
   {
     slug: "marche",
-    href: "/services#marche",
+    href: "/services/marche",
     title: "Marché",
     description: "Vos courses au marché sans vous déplacer.",
     iconBg: "bg-or/15",
@@ -77,7 +77,7 @@ const services: Service[] = [
   },
   {
     slug: "food",
-    href: "/services#food",
+    href: "/services/food",
     title: "Food",
     description: "Vos plats préférés livrés chauds à domicile.",
     iconBg: "bg-rouge/10",
