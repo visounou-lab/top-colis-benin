@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { getWhatsAppUrl } from "@/lib/constants";
@@ -99,7 +99,7 @@ export default function ContactForm() {
           Envoyer un message
         </h2>
         <p className="text-gris-texte text-sm">
-          Votre message s'ouvrira dans WhatsApp, pré-rempli.
+          Votre message s&apos;ouvrira dans WhatsApp, pré-rempli.
         </p>
       </div>
 

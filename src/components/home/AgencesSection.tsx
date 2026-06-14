@@ -1,4 +1,4 @@
-import { AGENCIES, WHATSAPP_URL } from "@/lib/constants";
+﻿import { AGENCIES, WHATSAPP_URL } from "@/lib/constants";
 
 function IconPin() {
   return (
@@ -69,7 +69,7 @@ export default function AgencesSection() {
           <div>
             <p className="font-semibold text-noir text-sm">Contact client disponible 24h/24 — 7j/7</p>
             <p className="text-gris-texte text-xs mt-0.5">
-              Hors horaires d'agence, joignez-nous directement sur WhatsApp.
+              Hors horaires d&apos;agence, joignez-nous directement sur WhatsApp.
             </p>
           </div>
           <a

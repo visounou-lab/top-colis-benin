@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { getWhatsAppUrl, WHATSAPP_URL } from "@/lib/constants";
+import { getWhatsAppUrl } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Espace Diaspora — TopColis Bénin",
@@ -124,10 +124,10 @@ const usages: Usage[] = [
     iconColor: "text-rouge",
     title: "Repas & cadeaux",
     description:
-      "Offrez un repas chaud à vos parents, un plat de fête ou un cadeau depuis l'étranger. On se charge de la commande et de la livraison.",
+      "Offrez un repas chaud à vos parents, un plat de fête ou un cadeau depuis l&apos;étranger. On se charge de la commande et de la livraison.",
     href: "/services/food",
     waMessage:
-      "Bonjour TopColis, Je voudrais envoyer un repas ou un cadeau à un proche au Bénin depuis l'étranger. Pouvez-vous m'aider ?",
+      "Bonjour TopColis, Je voudrais envoyer un repas ou un cadeau à un proche au Bénin depuis l&apos;étranger. Pouvez-vous m'aider ?",
     cta: "Voir le service food",
   },
   {
@@ -182,7 +182,7 @@ export default function DiasporaPage() {
           {/* Titre */}
           <h1 className="font-heading text-4xl sm:text-6xl font-bold text-noir leading-[1.1] tracking-tight mb-6">
             Vos proches au Bénin,<br />
-            <span className="text-rouge">pris en charge depuis l'étranger.</span>
+            <span className="text-rouge">pris en charge depuis l&apos;étranger.</span>
           </h1>
 
           <p className="text-gris-texte text-lg sm:text-xl leading-relaxed max-w-2xl mb-10">
@@ -242,9 +242,9 @@ export default function DiasporaPage() {
                 Simple, fiable,<br />sans stress.
               </h2>
               <p className="text-gris-texte text-base leading-relaxed mb-8">
-                Pas besoin d'appeler un cousin pour qu'il gère vos courses.
+                Pas besoin d&apos;appeler un cousin pour qu&apos;il gère vos courses.
                 TopColis est votre relais de confiance au Bénin — vous commandez,
-                on s'occupe du reste.
+                on s&apos;occupe du reste.
               </p>
               <ul className="space-y-3">
                 {avantages.map((a) => (

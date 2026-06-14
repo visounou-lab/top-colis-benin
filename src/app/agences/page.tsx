@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { getWhatsAppUrl, WHATSAPP_URL } from "@/lib/constants";
 
@@ -103,7 +103,7 @@ export default function AgencesPage() {
             Retrouvez-nous près de chez vous.
           </h1>
           <p className="text-gris-texte text-lg sm:text-xl leading-relaxed max-w-xl">
-            Déposez votre colis, passez commande ou venez nous rencontrer dans l'une de
+            Déposez votre colis, passez commande ou venez nous rencontrer dans l&apos;une de
             nos agences à Abomey-Calavi, Cotonou et Porto-Novo.
           </p>
         </div>
@@ -225,10 +225,10 @@ export default function AgencesPage() {
       <section className="bg-noir px-4 py-14 sm:py-16">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-heading text-2xl sm:text-3xl font-bold text-creme mb-3">
-            Besoin d'une précision sur l'itinéraire ?
+            Besoin d&apos;une précision sur l&apos;itinéraire ?
           </h2>
           <p className="text-creme/60 text-sm mb-7 max-w-md mx-auto leading-relaxed">
-            Écrivez-nous sur WhatsApp, nous vous guidons jusqu'à l'agence la plus
+            Écrivez-nous sur WhatsApp, nous vous guidons jusqu&apos;à l&apos;agence la plus
             proche de vous.
           </p>
           <a

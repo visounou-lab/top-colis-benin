@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { WHATSAPP_URL } from "@/lib/constants";
@@ -238,7 +238,7 @@ export default function ServicesPage() {
           </h2>
           <p className="text-gris-texte text-base mb-7 max-w-md mx-auto">
             Décrivez votre besoin sur WhatsApp — on vous oriente vers la bonne
-            option et on s'occupe du reste.
+            option et on s&apos;occupe du reste.
           </p>
           <a
             href={WHATSAPP_URL}
