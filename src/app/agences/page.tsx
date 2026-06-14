@@ -1,0 +1,247 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { getWhatsAppUrl, WHATSAPP_URL } from "@/lib/constants";
+
+export const metadata: Metadata = {
+  title: "Nos Agences — TopColis Bénin",
+  description:
+    "Retrouvez nos 3 agences à Abomey-Calavi (Kpota), Cotonou (Missèbo) et Porto-Novo (Foun-Foun Gbego). Ouvertes tous les jours de 8h à 20h, contact 24h/24.",
+};
+
+/* ─── Données locales ─────────────────────────────────────────────────────── */
+
+const agencies = [
+  {
+    city: "Abomey-Calavi",
+    area: "Kpota",
+    address: "À 200 m du carrefour Kpota en direction de l'église Bakhita",
+    accentBg: "bg-rouge/8",
+    accentBorder: "border-rouge/20",
+    accentText: "text-rouge",
+    accentBadge: "bg-rouge/10 text-rouge",
+    waMessage:
+      "Bonjour TopColis, je souhaite visiter votre agence d'Abomey-Calavi (Kpota). Pouvez-vous me confirmer les horaires et l'adresse exacte ?",
+  },
+  {
+    city: "Cotonou",
+    area: "Marché Missèbo",
+    address: "En face de la banque BOA",
+    accentBg: "bg-or/8",
+    accentBorder: "border-or/20",
+    accentText: "text-or",
+    accentBadge: "bg-or/15 text-or",
+    waMessage:
+      "Bonjour TopColis, je souhaite visiter votre agence de Cotonou (Missèbo). Pouvez-vous me confirmer les horaires et l'adresse exacte ?",
+  },
+  {
+    city: "Porto-Novo",
+    area: "Foun-Foun Gbego",
+    address: "Non loin de l'École Normale Supérieure",
+    accentBg: "bg-rouge/8",
+    accentBorder: "border-rouge/20",
+    accentText: "text-rouge",
+    accentBadge: "bg-rouge/10 text-rouge",
+    waMessage:
+      "Bonjour TopColis, je souhaite visiter votre agence de Porto-Novo (Foun-Foun Gbego). Pouvez-vous me confirmer les horaires et l'adresse exacte ?",
+  },
+];
+
+/* ─── Icônes ──────────────────────────────────────────────────────────────── */
+
+function IconPin() {
+  return (
+    <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M12 2C8.686 2 6 4.686 6 8c0 4.5 6 12 6 12s6-7.5 6-12c0-3.314-2.686-6-6-6z" />
+      <circle cx="12" cy="8" r="2" />
+    </svg>
+  );
+}
+
+function IconClock() {
+  return (
+    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
+    </svg>
+  );
+}
+
+function IconWhatsApp() {
+  return (
+    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  );
+}
+
+function IconPhone() {
+  return (
+    <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.05 2.21 2 2 0 012 .04h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+    </svg>
+  );
+}
+
+/* ─── Page ────────────────────────────────────────────────────────────────── */
+
+export default function AgencesPage() {
+  return (
+    <>
+      {/* ── Hero ─────────────────────────────────────────────────────────── */}
+      <section className="bg-creme px-4 pt-12 pb-14 sm:pt-16 sm:pb-18">
+        <div className="max-w-5xl mx-auto">
+          <nav aria-label="Fil d'Ariane" className="mb-8 text-sm text-gris-texte">
+            <Link href="/" className="hover:text-rouge transition-colors">Accueil</Link>
+            <span className="mx-2" aria-hidden="true">›</span>
+            <span className="text-noir font-medium" aria-current="page">Agences</span>
+          </nav>
+
+          <p className="text-rouge text-xs font-semibold uppercase tracking-widest mb-3">
+            3 agences
+          </p>
+          <h1 className="font-heading text-4xl sm:text-5xl font-bold text-noir leading-tight mb-4">
+            Retrouvez-nous près de chez vous.
+          </h1>
+          <p className="text-gris-texte text-lg sm:text-xl leading-relaxed max-w-xl">
+            Déposez votre colis, passez commande ou venez nous rencontrer dans l'une de
+            nos agences à Abomey-Calavi, Cotonou et Porto-Novo.
+          </p>
+        </div>
+      </section>
+
+      {/* ── Mention 24h/7j ───────────────────────────────────────────────── */}
+      <div className="bg-rouge px-4 py-4">
+        <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div className="flex items-center gap-2 text-white text-sm font-semibold">
+            <IconClock />
+            Agences ouvertes tous les jours · 8h – 20h
+          </div>
+          <div className="flex items-center gap-2 text-white/80 text-sm">
+            <IconPhone />
+            Contact client disponible 24h/24 · 7j/7
+          </div>
+        </div>
+      </div>
+
+      {/* ── Cartes agences ───────────────────────────────────────────────── */}
+      <section className="bg-white px-4 py-14 sm:py-18" aria-labelledby="agences-heading">
+        <div className="max-w-5xl mx-auto">
+          <h2 id="agences-heading" className="sr-only">Nos agences</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {agencies.map((ag, i) => (
+              <article
+                key={ag.city}
+                className={`rounded-3xl border ${ag.accentBorder} bg-creme p-7 flex flex-col gap-6`}
+              >
+                {/* Numéro */}
+                <span
+                  className={`font-heading text-5xl font-bold leading-none select-none ${ag.accentText} opacity-20`}
+                  aria-hidden="true"
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+
+                {/* Localisation */}
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-start gap-2">
+                    <span className={ag.accentText}>
+                      <IconPin />
+                    </span>
+                    <div>
+                      <h3 className="font-heading font-bold text-noir text-xl leading-tight">
+                        {ag.city}
+                      </h3>
+                      <p className={`text-sm font-semibold mt-0.5 ${ag.accentText}`}>
+                        {ag.area}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="text-gris-texte text-sm leading-relaxed pl-7">
+                    {ag.address}
+                  </p>
+                </div>
+
+                {/* Horaires */}
+                <div className={`rounded-2xl px-4 py-3 ${ag.accentBadge} bg-opacity-10 flex items-center gap-2`}>
+                  <IconClock />
+                  <div className="text-xs font-semibold leading-snug">
+                    Tous les jours · 8h – 20h
+                  </div>
+                </div>
+
+                {/* Bouton WhatsApp */}
+                <a
+                  href={getWhatsAppUrl(ag.waMessage)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-flex items-center justify-center gap-2 bg-whatsapp text-white text-sm font-semibold px-5 py-3 rounded-full hover:opacity-90 active:scale-95 transition-all"
+                >
+                  <IconWhatsApp />
+                  Contacter cette agence
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Informations pratiques ────────────────────────────────────────── */}
+      <section className="bg-creme px-4 py-12 sm:py-16 border-t border-border">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+            {[
+              {
+                label: "Horaires agences",
+                value: "8h – 20h",
+                sub: "Tous les jours sans exception",
+              },
+              {
+                label: "Contact client",
+                value: "24h / 7j",
+                sub: "Disponible en permanence",
+              },
+              {
+                label: "Réponse WhatsApp",
+                value: "< 5 min",
+                sub: "En moyenne pendant les heures d'ouverture",
+              },
+            ].map((item) => (
+              <div key={item.label} className="bg-white rounded-3xl border border-border px-6 py-7">
+                <p className="text-gris-texte text-xs font-semibold uppercase tracking-widest mb-2">
+                  {item.label}
+                </p>
+                <p className="font-heading text-3xl font-bold text-rouge mb-1">
+                  {item.value}
+                </p>
+                <p className="text-gris-texte text-xs leading-snug">{item.sub}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── CTA ──────────────────────────────────────────────────────────── */}
+      <section className="bg-noir px-4 py-14 sm:py-16">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="font-heading text-2xl sm:text-3xl font-bold text-creme mb-3">
+            Besoin d'une précision sur l'itinéraire ?
+          </h2>
+          <p className="text-creme/60 text-sm mb-7 max-w-md mx-auto leading-relaxed">
+            Écrivez-nous sur WhatsApp, nous vous guidons jusqu'à l'agence la plus
+            proche de vous.
+          </p>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 bg-whatsapp text-white font-bold px-7 py-4 rounded-full text-base hover:opacity-90 active:scale-95 transition-all"
+          >
+            <IconWhatsApp />
+            Nous écrire sur WhatsApp
+          </a>
+        </div>
+      </section>
+    </>
+  );
+}

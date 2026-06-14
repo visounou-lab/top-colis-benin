@@ -18,11 +18,11 @@ export const AGENCIES = [
   {
     city: "Abomey-Calavi",
     area: "Kpota",
-    detail: "À 200 m du carrefour Kpota, vers l'église Bakhita",
+    detail: "À 200 m du carrefour Kpota en direction de l'église Bakhita",
   },
   {
     city: "Cotonou",
-    area: "Marché Missebo",
+    area: "Marché Missèbo",
     detail: "En face de la banque BOA",
   },
   {
