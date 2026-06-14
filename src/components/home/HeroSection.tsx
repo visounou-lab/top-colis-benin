@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { WHATSAPP_URL } from "@/lib/constants";
 
 export default function HeroSection() {
   return (
@@ -30,14 +29,12 @@ export default function HeroSection() {
 
         {/* Boutons d'action */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/devis"
             className="w-full sm:w-auto inline-flex items-center justify-center bg-rouge text-white font-semibold px-7 py-3.5 rounded-full text-sm hover:bg-rouge-fonce active:scale-95 transition-all"
           >
             Demander un devis colis
-          </a>
+          </Link>
           <Link
             href="/services"
             className="w-full sm:w-auto inline-flex items-center justify-center border-2 border-noir text-noir font-semibold px-7 py-3.5 rounded-full text-sm hover:bg-noir hover:text-creme active:scale-95 transition-all"

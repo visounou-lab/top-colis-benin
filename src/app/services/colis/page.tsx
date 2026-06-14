@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
 
@@ -58,7 +58,7 @@ const prestations: Prestation[] = [
 ];
 
 const WHATSAPP_MESSAGE =
-  "Bonjour TopColis 👋 Je souhaite envoyer un colis. Pouvez-vous me donner un devis (destination, poids approximatif) ?";
+  "Bonjour TopColis, Je souhaite envoyer un colis. Pouvez-vous me donner un devis (destination, poids approximatif) ?";
 
 /* ─── Page ────────────────────────────────────────────────────────────────── */
 

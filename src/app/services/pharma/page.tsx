@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
 
@@ -44,7 +44,7 @@ const prestations: Prestation[] = [
 ];
 
 const WHATSAPP_MESSAGE =
-  "Bonjour TopColis 👋 J'ai besoin d'une livraison urgente de médicaments.\n- Adresse de livraison :\n- Je vous envoie la photo de l'ordonnance.";
+  "Bonjour TopColis, J'ai besoin d'une livraison urgente de médicaments.\n- Adresse de livraison :\n- Je vous envoie la photo de l'ordonnance.";
 
 export default function PharmaPage() {
   return (

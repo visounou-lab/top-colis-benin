@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = "229XXXXXXXX";
+﻿export const WHATSAPP_NUMBER = "2290167687870";
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 
 /** Génère un lien WhatsApp avec message pré-rempli (optionnel) */
@@ -18,16 +18,16 @@ export const AGENCIES = [
   {
     city: "Abomey-Calavi",
     area: "Kpota",
-    detail: "Quartier Kpota",
+    detail: "À 200 m du carrefour Kpota, vers l'église Bakhita",
   },
   {
     city: "Cotonou",
     area: "Marché Missebo",
-    detail: "Face BOA",
+    detail: "En face de la banque BOA",
   },
   {
     city: "Porto-Novo",
-    area: "Après l'ENS",
-    detail: "À proximité de l'ENS",
+    area: "Foun-Foun Gbego",
+    detail: "Non loin de l'École Normale Supérieure",
   },
 ];

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
 
@@ -45,7 +45,7 @@ const prestations: Prestation[] = [
 ];
 
 const WHATSAPP_MESSAGE =
-  "Bonjour TopColis 👋 Je souhaite commander de la nourriture.\n- Adresse de livraison :\n- Quels plats sont disponibles aujourd'hui ?";
+  "Bonjour TopColis, Je souhaite commander de la nourriture.\n- Adresse de livraison :\n- Quels plats sont disponibles aujourd'hui ?";
 
 export default function FoodPage() {
   return (

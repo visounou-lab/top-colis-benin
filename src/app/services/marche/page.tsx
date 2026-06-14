@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
 
@@ -43,7 +43,7 @@ const prestations: Prestation[] = [
 ];
 
 const WHATSAPP_MESSAGE =
-  "Bonjour TopColis 👋 Je souhaite passer une commande de courses.\n- Marché ou magasin souhaité :\n- Adresse de livraison :\n- Voici ma liste :";
+  "Bonjour TopColis, Je souhaite passer une commande de courses.\n- Marché ou magasin souhaité :\n- Adresse de livraison :\n- Voici ma liste :";
 
 export default function MarchePage() {
   return (

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
 
@@ -49,7 +49,7 @@ const prestations: Prestation[] = [
 ];
 
 const WHATSAPP_MESSAGE =
-  "Bonjour TopColis 👋 Je souhaite réserver un taxi ou un zem. Voici ma demande :\n- Heure souhaitée :\n- Lieu de départ :\n- Destination :";
+  "Bonjour TopColis, Je souhaite réserver un taxi ou un zem. Voici ma demande :\n- Heure souhaitée :\n- Lieu de départ :\n- Destination :";
 
 export default function TaxiPage() {
   return (
