@@ -55,6 +55,7 @@ export default function PharmaPage() {
       icon={<IconPharma />}
       prestations={prestations}
       whatsappMessage={WHATSAPP_MESSAGE}
+      tarifSlug="pharma"
     />
   );
 }

@@ -56,6 +56,7 @@ export default function FoodPage() {
       icon={<IconFood />}
       prestations={prestations}
       whatsappMessage={WHATSAPP_MESSAGE}
+      tarifSlug="food"
     />
   );
 }

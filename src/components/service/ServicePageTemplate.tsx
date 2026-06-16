@@ -24,6 +24,8 @@ export type ServicePageProps = {
   prestations: Prestation[];
   /** Texte pré-rempli du message WhatsApp (sans encodage) */
   whatsappMessage: string;
+  /** Slug du service dans la grille tarifaire, ex. "taxi" — sert à lier vers /tarifs#taxi */
+  tarifSlug: string;
 };
 
 /* ─── Icônes internes ────────────────────────────────────────────────────── */
@@ -53,6 +55,7 @@ export default function ServicePageTemplate({
   icon,
   prestations,
   whatsappMessage,
+  tarifSlug,
 }: ServicePageProps) {
   const waUrl = getWhatsAppUrl(whatsappMessage);
 
@@ -98,15 +101,23 @@ export default function ServicePageTemplate({
           </p>
 
           {/* CTA hero */}
-          <a
-            href={waUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 bg-rouge text-white font-semibold px-7 py-3.5 rounded-full text-sm hover:bg-rouge-fonce active:scale-95 transition-all"
-          >
-            <IconWhatsApp />
-            Commander {name} sur WhatsApp
-          </a>
+          <div className="flex flex-wrap items-center gap-4">
+            <a
+              href={waUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 bg-rouge text-white font-semibold px-7 py-3.5 rounded-full text-sm hover:bg-rouge-fonce active:scale-95 transition-all"
+            >
+              <IconWhatsApp />
+              Commander {name} sur WhatsApp
+            </a>
+            <Link
+              href={`/tarifs#${tarifSlug}`}
+              className="text-sm font-semibold text-noir underline decoration-noir/30 hover:decoration-noir transition-colors"
+            >
+              Voir les tarifs {name} →
+            </Link>
+          </div>
         </div>
       </section>
 

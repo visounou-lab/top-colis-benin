@@ -54,6 +54,7 @@ export default function MarchePage() {
       icon={<IconMarche />}
       prestations={prestations}
       whatsappMessage={WHATSAPP_MESSAGE}
+      tarifSlug="marche"
     />
   );
 }

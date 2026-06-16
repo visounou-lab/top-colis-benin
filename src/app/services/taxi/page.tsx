@@ -60,6 +60,7 @@ export default function TaxiPage() {
       icon={<IconTaxi />}
       prestations={prestations}
       whatsappMessage={WHATSAPP_MESSAGE}
+      tarifSlug="taxi"
     />
   );
 }

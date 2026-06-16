@@ -71,6 +71,7 @@ export default function ColisPage() {
       icon={<IconColis />}
       prestations={prestations}
       whatsappMessage={WHATSAPP_MESSAGE}
+      tarifSlug="colis"
     />
   );
 }

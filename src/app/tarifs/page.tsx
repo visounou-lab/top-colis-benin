@@ -307,7 +307,11 @@ export default function TarifsPage() {
       <section className="bg-white px-4 py-14 sm:py-18">
         <div className="max-w-5xl mx-auto space-y-10">
           {TARIFS.map((service) => (
-            <article key={service.slug} className="rounded-3xl border border-border overflow-hidden">
+            <article
+              key={service.slug}
+              id={service.slug}
+              className="rounded-3xl border border-border overflow-hidden scroll-mt-24"
+            >
 
               {/* En-tête de la carte */}
               <div className={`${service.accentBg} border-b border-border px-6 py-5 flex items-center gap-4`}>
