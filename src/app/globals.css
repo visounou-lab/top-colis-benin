@@ -48,8 +48,8 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 
   /* Top Colis Benin — palette */
-  --color-rouge: #C8102E;
-  --color-rouge-fonce: #A0152A;
+  --color-rouge: #E2231A;
+  --color-rouge-fonce: #B81B12;
   --color-creme: #FBF6EE;
   --color-noir: #1A1714;
   --color-or: #E3A21A;
@@ -64,7 +64,7 @@
   --card-foreground: #1A1714;
   --popover: #FBF6EE;
   --popover-foreground: #1A1714;
-  --primary: #C8102E;
+  --primary: #E2231A;
   --primary-foreground: #FBF6EE;
   --secondary: oklch(0.95 0.005 60);
   --secondary-foreground: #1A1714;
@@ -75,21 +75,21 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.9 0.01 60);
   --input: oklch(0.9 0.01 60);
-  --ring: #C8102E;
-  --chart-1: #C8102E;
+  --ring: #E2231A;
+  --chart-1: #E2231A;
   --chart-2: #E3A21A;
   --chart-3: #25D366;
   --chart-4: #6B655C;
-  --chart-5: #A0152A;
+  --chart-5: #B81B12;
   --radius: 0.625rem;
   --sidebar: #FBF6EE;
   --sidebar-foreground: #1A1714;
-  --sidebar-primary: #C8102E;
+  --sidebar-primary: #E2231A;
   --sidebar-primary-foreground: #FBF6EE;
   --sidebar-accent: oklch(0.95 0.005 60);
   --sidebar-accent-foreground: #1A1714;
   --sidebar-border: oklch(0.9 0.01 60);
-  --sidebar-ring: #C8102E;
+  --sidebar-ring: #E2231A;
 }
 
 .dark {
@@ -99,7 +99,7 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: #C8102E;
+  --primary: #E2231A;
   --primary-foreground: #FBF6EE;
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -110,20 +110,20 @@
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: #C8102E;
-  --chart-1: #C8102E;
+  --ring: #E2231A;
+  --chart-1: #E2231A;
   --chart-2: #E3A21A;
   --chart-3: #25D366;
   --chart-4: #6B655C;
-  --chart-5: #A0152A;
+  --chart-5: #B81B12;
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: #C8102E;
+  --sidebar-primary: #E2231A;
   --sidebar-primary-foreground: #FBF6EE;
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: #C8102E;
+  --sidebar-ring: #E2231A;
 }
 
 @layer base {

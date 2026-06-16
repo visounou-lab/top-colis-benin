@@ -20,7 +20,7 @@ export default function OpengraphImage() {
       >
         <div style={{ display: "flex", fontSize: 88, fontWeight: 700 }}>
           <span style={{ color: "#FBF6EE" }}>Top&nbsp;</span>
-          <span style={{ color: "#C8102E" }}>Colis&nbsp;</span>
+          <span style={{ color: "#E2231A" }}>Colis&nbsp;</span>
           <span style={{ color: "#FBF6EE" }}>Bénin</span>
         </div>
         <div style={{ display: "flex", marginTop: 22, fontSize: 32, color: "#E3A21A", fontWeight: 600 }}>
