@@ -18,9 +18,24 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://topcolisbenin.vercel.app"),
   title: "Top Colis Benin — Livraison express au Bénin",
   description:
     "Envoi et réception de colis partout au Bénin. Agences à Cotonou, Abomey-Calavi et Porto-Novo. Disponible 24h/24.",
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Top Colis Bénin",
+    title: "Top Colis Benin — Livraison express au Bénin",
+    description:
+      "Envoi et réception de colis partout au Bénin. Agences à Cotonou, Abomey-Calavi et Porto-Novo. Disponible 24h/24.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Top Colis Benin — Livraison express au Bénin",
+    description:
+      "Envoi et réception de colis partout au Bénin. Agences à Cotonou, Abomey-Calavi et Porto-Novo. Disponible 24h/24.",
+  },
 };
 
 export default function RootLayout({
