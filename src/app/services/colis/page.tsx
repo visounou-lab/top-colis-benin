@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
+import { SERVICE_WHATSAPP_MESSAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Service Colis — Top Colis Bénin",
@@ -57,8 +58,7 @@ const prestations: Prestation[] = [
   },
 ];
 
-const WHATSAPP_MESSAGE =
-  "Bonjour Top Colis Bénin, Je souhaite envoyer un colis. Pouvez-vous me donner un devis (destination, poids approximatif) ?";
+const WHATSAPP_MESSAGE = SERVICE_WHATSAPP_MESSAGES.colis;
 
 /* ─── Page ────────────────────────────────────────────────────────────────── */
 

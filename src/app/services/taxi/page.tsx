@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
+import { SERVICE_WHATSAPP_MESSAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Service Taxi — Top Colis Bénin",
@@ -48,8 +49,7 @@ const prestations: Prestation[] = [
   },
 ];
 
-const WHATSAPP_MESSAGE =
-  "Bonjour Top Colis Bénin, Je souhaite réserver un taxi ou un zem. Voici ma demande :\n- Heure souhaitée :\n- Lieu de départ :\n- Destination :";
+const WHATSAPP_MESSAGE = SERVICE_WHATSAPP_MESSAGES.taxi;
 
 export default function TaxiPage() {
   return (

@@ -1,7 +1,7 @@
 ﻿import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
-import { getWhatsAppUrl } from "@/lib/constants";
+import { getWhatsAppUrl, SERVICE_WHATSAPP_MESSAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Tarifs — Top Colis Bénin",
@@ -356,6 +356,19 @@ export default function TarifsPage() {
                   <p className="text-xs text-gris-texte leading-relaxed">{service.footer}</p>
                 </div>
               )}
+
+              {/* CTA de commande directe */}
+              <div className="border-t border-border px-6 py-4">
+                <a
+                  href={getWhatsAppUrl(SERVICE_WHATSAPP_MESSAGES[service.slug])}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-whatsapp text-white font-semibold px-5 py-2.5 rounded-full text-sm hover:opacity-90 active:scale-95 transition-all"
+                >
+                  <IconWhatsApp />
+                  Commander {service.name} sur WhatsApp
+                </a>
+              </div>
             </article>
           ))}
         </div>

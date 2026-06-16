@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
+import { SERVICE_WHATSAPP_MESSAGES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Service Marché — Top Colis Bénin",
@@ -42,8 +43,7 @@ const prestations: Prestation[] = [
   },
 ];
 
-const WHATSAPP_MESSAGE =
-  "Bonjour Top Colis Bénin, Je souhaite passer une commande de courses.\n- Marché ou magasin souhaité :\n- Adresse de livraison :\n- Voici ma liste :";
+const WHATSAPP_MESSAGE = SERVICE_WHATSAPP_MESSAGES.marche;
 
 export default function MarchePage() {
   return (
