@@ -7,11 +7,12 @@ export const getWhatsAppUrl = (message?: string) =>
     ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
     : WHATSAPP_URL;
 
-export const NAV_LINKS = [
+export const NAV_LINKS: { label: string; href: string; badge?: string }[] = [
   { label: "Services", href: "/services" },
   { label: "Diaspora", href: "/diaspora" },
   { label: "Agences", href: "/agences" },
   { label: "Tarifs", href: "/tarifs" },
+  { label: "Top Shopping", href: "/top-shopping", badge: "Bientôt" },
 ];
 
 export const AGENCIES = [

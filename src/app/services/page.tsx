@@ -4,9 +4,9 @@ import Link from "next/link";
 import { WHATSAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Nos Services — TopColis Bénin",
+  title: "Nos Services — Top Colis Bénin",
   description:
-    "Livraison de colis, taxi, médicaments, courses au marché et food — TopColis couvre tous vos besoins au quotidien entre Calavi, Cotonou et Porto-Novo.",
+    "Livraison de colis, taxi, médicaments, courses au marché et food — Top Colis Bénin couvre tous vos besoins au quotidien entre Calavi, Cotonou et Porto-Novo.",
 };
 
 /* ─── Icônes ──────────────────────────────────────────────────────────────── */
@@ -202,7 +202,7 @@ export default function ServicesPage() {
           </h1>
           <p className="text-gris-texte text-lg sm:text-xl leading-relaxed max-w-xl">
             De la livraison de colis au repas chaud, en passant par vos médicaments
-            et vos courses — TopColis couvre tous vos besoins du quotidien.
+            et vos courses — Top Colis Bénin couvre tous vos besoins du quotidien.
           </p>
         </div>
       </section>

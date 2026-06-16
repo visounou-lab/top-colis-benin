@@ -3,7 +3,7 @@ import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Service Colis — TopColis Bénin",
+  title: "Service Colis — Top Colis Bénin",
   description:
     "Envoi, livraison, ramassage et expédition internationale de colis au Bénin. Livraison RD Congo dès 72h. Livraisons groupées Calavi-Cotonou-Porto-Novo.",
 };
@@ -58,7 +58,7 @@ const prestations: Prestation[] = [
 ];
 
 const WHATSAPP_MESSAGE =
-  "Bonjour TopColis, Je souhaite envoyer un colis. Pouvez-vous me donner un devis (destination, poids approximatif) ?";
+  "Bonjour Top Colis Bénin, Je souhaite envoyer un colis. Pouvez-vous me donner un devis (destination, poids approximatif) ?";
 
 /* ─── Page ────────────────────────────────────────────────────────────────── */
 
@@ -67,7 +67,7 @@ export default function ColisPage() {
     <ServicePageTemplate
       name="Colis"
       tagline="Votre colis livré rapidement, partout au Bénin et dans le monde."
-      description="De la livraison locale en ville à l'expédition internationale, TopColis prend en charge votre colis de A à Z — ramassage, emballage, livraison et confirmation."
+      description="De la livraison locale en ville à l'expédition internationale, Top Colis Bénin prend en charge votre colis de A à Z — ramassage, emballage, livraison et confirmation."
       icon={<IconColis />}
       prestations={prestations}
       whatsappMessage={WHATSAPP_MESSAGE}

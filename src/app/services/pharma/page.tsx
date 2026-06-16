@@ -3,7 +3,7 @@ import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Service Pharma — TopColis Bénin",
+  title: "Service Pharma — Top Colis Bénin",
   description:
     "Achat et livraison express de médicaments en urgence à domicile ou à l'hôpital entre Calavi et Cotonou. Envoyez la photo de l'ordonnance sur WhatsApp, nous validons le prix avant d'acheter.",
 };
@@ -44,7 +44,7 @@ const prestations: Prestation[] = [
 ];
 
 const WHATSAPP_MESSAGE =
-  "Bonjour TopColis, J'ai besoin d'une livraison urgente de médicaments.\n- Adresse de livraison :\n- Je vous envoie la photo de l'ordonnance.";
+  "Bonjour Top Colis Bénin, J'ai besoin d'une livraison urgente de médicaments.\n- Adresse de livraison :\n- Je vous envoie la photo de l'ordonnance.";
 
 export default function PharmaPage() {
   return (

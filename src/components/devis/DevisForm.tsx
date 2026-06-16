@@ -52,7 +52,7 @@ function validate(d: FormData): Errors {
 
 function buildMessage(d: FormData): string {
   const lines = [
-    "Bonjour TopColis, Je souhaite un devis pour un envoi de colis.",
+    "Bonjour Top Colis Bénin, Je souhaite un devis pour un envoi de colis.",
     "",
     "*Détails du colis*",
     `• Ville de départ : ${d.villeDepart}`,

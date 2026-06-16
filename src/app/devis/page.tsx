@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import DevisForm from "@/components/devis/DevisForm";
 
 export const metadata: Metadata = {
-  title: "Demande de devis colis — TopColis Bénin",
+  title: "Demande de devis colis — Top Colis Bénin",
   description:
     "Obtenez un devis personnalisé pour votre envoi de colis en quelques secondes. Remplissez le formulaire et recevez une réponse directement sur WhatsApp.",
 };

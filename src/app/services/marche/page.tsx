@@ -3,7 +3,7 @@ import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Service Marché — TopColis Bénin",
+  title: "Service Marché — Top Colis Bénin",
   description:
     "Courses dans n'importe quel marché, poissonnerie ou magasin au Bénin. Offre spéciale diaspora : envoyez votre liste, nous achetons au pays et expédions vers votre pays de résidence.",
 };
@@ -43,7 +43,7 @@ const prestations: Prestation[] = [
 ];
 
 const WHATSAPP_MESSAGE =
-  "Bonjour TopColis, Je souhaite passer une commande de courses.\n- Marché ou magasin souhaité :\n- Adresse de livraison :\n- Voici ma liste :";
+  "Bonjour Top Colis Bénin, Je souhaite passer une commande de courses.\n- Marché ou magasin souhaité :\n- Adresse de livraison :\n- Voici ma liste :";
 
 export default function MarchePage() {
   return (

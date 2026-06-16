@@ -18,7 +18,7 @@ function validate(d: FormData): Errors {
 
 function buildMessage(d: FormData): string {
   return [
-    `Bonjour TopColis, je m'appelle ${d.nom}.`,
+    `Bonjour Top Colis Bénin, je m'appelle ${d.nom}.`,
     "",
     `Sujet : ${d.sujet}`,
     "",

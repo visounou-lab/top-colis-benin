@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { WHATSAPP_URL } from "@/lib/constants";
 import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact — TopColis Bénin",
+  title: "Contact — Top Colis Bénin",
   description:
-    "Contactez TopColis Bénin par WhatsApp au +229 01 67 68 78 70. Réponse en moins de 5 minutes. 3 agences à Abomey-Calavi, Cotonou et Porto-Novo.",
+    "Contactez Top Colis Bénin par WhatsApp au +229 01 67 68 78 70. Réponse en moins de 5 minutes. 3 agences à Abomey-Calavi, Cotonou et Porto-Novo.",
 };
 
 /* ─── Icônes ──────────────────────────────────────────────────────────────── */

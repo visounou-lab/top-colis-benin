@@ -3,7 +3,7 @@ import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Service Taxi — TopColis Bénin",
+  title: "Service Taxi — Top Colis Bénin",
   description:
     "Zem ou voiture sur appel à tarif unique. Réservation depuis l'étranger, prise en charge à l'aéroport et déplacements pendant tout votre séjour au Bénin.",
 };
@@ -49,14 +49,14 @@ const prestations: Prestation[] = [
 ];
 
 const WHATSAPP_MESSAGE =
-  "Bonjour TopColis, Je souhaite réserver un taxi ou un zem. Voici ma demande :\n- Heure souhaitée :\n- Lieu de départ :\n- Destination :";
+  "Bonjour Top Colis Bénin, Je souhaite réserver un taxi ou un zem. Voici ma demande :\n- Heure souhaitée :\n- Lieu de départ :\n- Destination :";
 
 export default function TaxiPage() {
   return (
     <ServicePageTemplate
       name="Taxi"
       tagline="Zem ou voiture, à votre porte en quelques minutes."
-      description="Besoin d'un transport rapide ou d'une prise en charge depuis l'aéroport ? TopColis met à votre disposition des zems et des voitures à tarif unique, réservables sur WhatsApp — depuis le Bénin ou depuis l'étranger."
+      description="Besoin d'un transport rapide ou d'une prise en charge depuis l'aéroport ? Top Colis Bénin met à votre disposition des zems et des voitures à tarif unique, réservables sur WhatsApp — depuis le Bénin ou depuis l'étranger."
       icon={<IconTaxi />}
       prestations={prestations}
       whatsappMessage={WHATSAPP_MESSAGE}

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getWhatsAppUrl, WHATSAPP_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Nos Agences — TopColis Bénin",
+  title: "Nos Agences — Top Colis Bénin",
   description:
     "Retrouvez nos 3 agences à Abomey-Calavi (Kpota), Cotonou (Missèbo) et Porto-Novo (Foun-Foun Gbego). Ouvertes tous les jours de 8h à 20h, contact 24h/24.",
 };
@@ -20,7 +20,7 @@ const agencies = [
     accentText: "text-rouge",
     accentBadge: "bg-rouge/10 text-rouge",
     waMessage:
-      "Bonjour TopColis, je souhaite visiter votre agence d'Abomey-Calavi (Kpota). Pouvez-vous me confirmer les horaires et l'adresse exacte ?",
+      "Bonjour Top Colis Bénin, je souhaite visiter votre agence d'Abomey-Calavi (Kpota). Pouvez-vous me confirmer les horaires et l'adresse exacte ?",
   },
   {
     city: "Cotonou",
@@ -31,7 +31,7 @@ const agencies = [
     accentText: "text-or",
     accentBadge: "bg-or/15 text-or",
     waMessage:
-      "Bonjour TopColis, je souhaite visiter votre agence de Cotonou (Missèbo). Pouvez-vous me confirmer les horaires et l'adresse exacte ?",
+      "Bonjour Top Colis Bénin, je souhaite visiter votre agence de Cotonou (Missèbo). Pouvez-vous me confirmer les horaires et l'adresse exacte ?",
   },
   {
     city: "Porto-Novo",
@@ -42,7 +42,7 @@ const agencies = [
     accentText: "text-rouge",
     accentBadge: "bg-rouge/10 text-rouge",
     waMessage:
-      "Bonjour TopColis, je souhaite visiter votre agence de Porto-Novo (Foun-Foun Gbego). Pouvez-vous me confirmer les horaires et l'adresse exacte ?",
+      "Bonjour Top Colis Bénin, je souhaite visiter votre agence de Porto-Novo (Foun-Foun Gbego). Pouvez-vous me confirmer les horaires et l'adresse exacte ?",
   },
 ];
 

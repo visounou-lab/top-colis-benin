@@ -3,7 +3,7 @@ import ServicePageTemplate from "@/components/service/ServicePageTemplate";
 import type { Prestation } from "@/components/service/ServicePageTemplate";
 
 export const metadata: Metadata = {
-  title: "Service Food — TopColis Bénin",
+  title: "Service Food — Top Colis Bénin",
   description:
     "Livraison de repas à moindre coût entre Calavi, Cotonou et Porto-Novo. Charcuteries de Porto-Novo, street food populaire, saveurs béninoises et africaines.",
 };
@@ -45,14 +45,14 @@ const prestations: Prestation[] = [
 ];
 
 const WHATSAPP_MESSAGE =
-  "Bonjour TopColis, Je souhaite commander de la nourriture.\n- Adresse de livraison :\n- Quels plats sont disponibles aujourd'hui ?";
+  "Bonjour Top Colis Bénin, Je souhaite commander de la nourriture.\n- Adresse de livraison :\n- Quels plats sont disponibles aujourd'hui ?";
 
 export default function FoodPage() {
   return (
     <ServicePageTemplate
       name="Food"
       tagline="Vos saveurs béninoises et africaines livrées, à prix doux."
-      description="Street food, charcuteries de Porto-Novo, plats africains et béninois — TopColis vous apporte les saveurs de votre quartier ou d'ailleurs, à petits prix, entre Abomey-Calavi, Cotonou et Porto-Novo."
+      description="Street food, charcuteries de Porto-Novo, plats africains et béninois — Top Colis Bénin vous apporte les saveurs de votre quartier ou d'ailleurs, à petits prix, entre Abomey-Calavi, Cotonou et Porto-Novo."
       icon={<IconFood />}
       prestations={prestations}
       whatsappMessage={WHATSAPP_MESSAGE}

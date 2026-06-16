@@ -4,9 +4,9 @@ import Link from "next/link";
 import { getWhatsAppUrl } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Tarifs — TopColis Bénin",
+  title: "Tarifs — Top Colis Bénin",
   description:
-    "Tarifs indicatifs de TopColis Bénin : colis local et international, taxi, pharma, marché et food. Devis exact gratuit sur WhatsApp.",
+    "Tarifs indicatifs de Top Colis Bénin : colis local et international, taxi, pharma, marché et food. Devis exact gratuit sur WhatsApp.",
 };
 
 /* ══════════════════════════════════════════════════════════════════════════════
@@ -501,7 +501,7 @@ export default function TarifsPage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <a
               href={getWhatsAppUrl(
-                "Bonjour TopColis, je souhaite obtenir un devis précis pour l'un de vos services. Pouvez-vous m'aider ?"
+                "Bonjour Top Colis Bénin, je souhaite obtenir un devis précis pour l'un de vos services. Pouvez-vous m'aider ?"
               )}
               target="_blank"
               rel="noopener noreferrer"

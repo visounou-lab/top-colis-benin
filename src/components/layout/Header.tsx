@@ -44,18 +44,23 @@ export default function Header() {
           className="font-heading text-xl font-bold text-noir tracking-tight"
           onClick={() => setOpen(false)}
         >
-          Top<span className="text-rouge">Colis</span>
+          Top <span className="text-rouge">Colis</span> Bénin
         </Link>
 
         {/* Navigation desktop */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Navigation principale">
-          {NAV_LINKS.map(({ label, href }) => (
+          {NAV_LINKS.map(({ label, href, badge }) => (
             <Link
               key={href}
               href={href}
-              className="text-sm font-medium text-noir hover:text-rouge transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-noir hover:text-rouge transition-colors"
             >
               {label}
+              {badge && (
+                <span className="text-[10px] font-bold uppercase tracking-wide bg-or/15 text-or px-1.5 py-0.5 rounded-full">
+                  {badge}
+                </span>
+              )}
             </Link>
           ))}
         </nav>
@@ -86,14 +91,19 @@ export default function Header() {
       {open && (
         <div className="md:hidden bg-creme border-t border-border">
           <nav className="px-4 pt-2 pb-2 flex flex-col" aria-label="Navigation mobile">
-            {NAV_LINKS.map(({ label, href }) => (
+            {NAV_LINKS.map(({ label, href, badge }) => (
               <Link
                 key={href}
                 href={href}
                 onClick={() => setOpen(false)}
-                className="py-3 text-base font-medium text-noir hover:text-rouge border-b border-border/60 last:border-0 transition-colors"
+                className="py-3 flex items-center gap-2 text-base font-medium text-noir hover:text-rouge border-b border-border/60 last:border-0 transition-colors"
               >
                 {label}
+                {badge && (
+                  <span className="text-[10px] font-bold uppercase tracking-wide bg-or/15 text-or px-1.5 py-0.5 rounded-full">
+                    {badge}
+                  </span>
+                )}
               </Link>
             ))}
           </nav>

@@ -49,7 +49,7 @@ export default function DiasporaBanner() {
             <span className="text-or">Votre famille est proche.</span>
           </h2>
           <p className="mt-4 text-gris-texte text-base sm:text-lg leading-relaxed max-w-xl">
-            De l&apos;Europe au Canada, des États-Unis à l&apos;Afrique — TopColis fait le lien
+            De l&apos;Europe au Canada, des États-Unis à l&apos;Afrique — Top Colis Bénin fait le lien
             entre vous et vos proches au Bénin.
           </p>
         </div>

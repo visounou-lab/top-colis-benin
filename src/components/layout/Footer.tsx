@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { AGENCIES, NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
 
 function IconPin({ className }: { className?: string }) {
@@ -32,7 +32,7 @@ export default function Footer() {
           {/* Colonne 1 — Logo + tagline */}
           <div>
             <Link href="/" className="font-heading text-2xl font-bold text-creme">
-              Top<span className="text-rouge">Colis</span>
+              Top <span className="text-rouge">Colis</span> Bénin
             </Link>
             <p className="mt-3 text-sm text-gris-texte leading-relaxed">
               Votre partenaire de livraison express au Bénin. Rapide, fiable et accessible.
@@ -110,7 +110,7 @@ export default function Footer() {
 
         {/* Séparateur + copyright */}
         <div className="mt-10 pt-6 border-t border-white/10 text-center text-xs text-gris-texte">
-          © {year} TopColis Bénin. Tous droits réservés.
+          © {year} Top Colis Bénin. Tous droits réservés.
         </div>
       </div>
     </footer>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { getWhatsAppUrl } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Espace Diaspora — TopColis Bénin",
+  title: "Espace Diaspora — Top Colis Bénin",
   description:
     "Depuis la France, la Belgique, le Canada ou ailleurs — envoyez des colis, commandez des repas et faites vos courses pour vos proches au Bénin via WhatsApp.",
 };
@@ -103,7 +103,7 @@ const usages: Usage[] = [
       "Vous avez des affaires, des vêtements ou des documents à envoyer à vos proches au Bénin ? Confiez-nous votre colis : on réceptionne, on emballe et on livre à domicile.",
     href: "/services/colis",
     waMessage:
-      "Bonjour TopColis, Je suis de la diaspora et souhaite envoyer un colis au Bénin. Pouvez-vous me donner plus d'informations ?",
+      "Bonjour Top Colis Bénin, Je suis de la diaspora et souhaite envoyer un colis au Bénin. Pouvez-vous me donner plus d'informations ?",
     cta: "En savoir plus sur les colis",
   },
   {
@@ -115,7 +115,7 @@ const usages: Usage[] = [
       "Envoyez votre liste de courses depuis l'étranger : légumes, poissons, produits locaux… Nous achetons au marché et livrons directement à votre famille.",
     href: "/services/marche",
     waMessage:
-      "Bonjour TopColis, Je suis en dehors du Bénin et voudrais commander des courses au marché pour ma famille. Comment ça marche ?",
+      "Bonjour Top Colis Bénin, Je suis en dehors du Bénin et voudrais commander des courses au marché pour ma famille. Comment ça marche ?",
     cta: "Voir le service marché",
   },
   {
@@ -127,7 +127,7 @@ const usages: Usage[] = [
       "Offrez un repas chaud à vos parents, un plat de fête ou un cadeau depuis l&apos;étranger. On se charge de la commande et de la livraison.",
     href: "/services/food",
     waMessage:
-      "Bonjour TopColis, Je voudrais envoyer un repas ou un cadeau à un proche au Bénin depuis l&apos;étranger. Pouvez-vous m'aider ?",
+      "Bonjour Top Colis Bénin, Je voudrais envoyer un repas ou un cadeau à un proche au Bénin depuis l&apos;étranger. Pouvez-vous m'aider ?",
     cta: "Voir le service food",
   },
   {
@@ -139,7 +139,7 @@ const usages: Usage[] = [
       "Un parent malade au Bénin ? Envoyez-nous l'ordonnance sur WhatsApp — nous achetons et livrons les médicaments à leur domicile ou à l'hôpital.",
     href: "/services/pharma",
     waMessage:
-      "Bonjour TopColis, Je suis en dehors du Bénin et veux faire livrer des médicaments à un proche. Comment ça marche ?",
+      "Bonjour Top Colis Bénin, Je suis en dehors du Bénin et veux faire livrer des médicaments à un proche. Comment ça marche ?",
     cta: "Voir le service pharma",
   },
 ];
@@ -195,7 +195,7 @@ export default function DiasporaPage() {
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href={getWhatsAppUrl(
-                "Bonjour TopColis, Je suis de la diaspora et aimerais en savoir plus sur vos services."
+                "Bonjour Top Colis Bénin, Je suis de la diaspora et aimerais en savoir plus sur vos services."
               )}
               target="_blank"
               rel="noopener noreferrer"
@@ -243,7 +243,7 @@ export default function DiasporaPage() {
               </h2>
               <p className="text-gris-texte text-base leading-relaxed mb-8">
                 Pas besoin d&apos;appeler un cousin pour qu&apos;il gère vos courses.
-                TopColis est votre relais de confiance au Bénin — vous commandez,
+                Top Colis Bénin est votre relais de confiance au Bénin — vous commandez,
                 on s&apos;occupe du reste.
               </p>
               <ul className="space-y-3">
@@ -265,7 +265,7 @@ export default function DiasporaPage() {
                   <IconWhatsApp />
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-noir">TopColis Bénin</p>
+                  <p className="text-sm font-bold text-noir">Top Colis Bénin</p>
                   <p className="text-xs text-gris-texte">+229 01 67 68 78 70</p>
                 </div>
                 <span className="ml-auto text-xs bg-whatsapp/10 text-whatsapp font-semibold px-2.5 py-1 rounded-full">
@@ -414,14 +414,14 @@ export default function DiasporaPage() {
           </p>
           <a
             href={getWhatsAppUrl(
-              "Bonjour TopColis, Je suis de la diaspora et voudrais utiliser vos services pour mes proches au Bénin."
+              "Bonjour Top Colis Bénin, Je suis de la diaspora et voudrais utiliser vos services pour mes proches au Bénin."
             )}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 bg-whatsapp text-white font-bold px-8 py-4 rounded-full text-base hover:opacity-90 active:scale-95 transition-all shadow-lg"
           >
             <IconWhatsApp />
-            Écrire à TopColis maintenant
+            Écrire à Top Colis Bénin maintenant
           </a>
           <p className="mt-4 text-creme/40 text-xs">
             Réponse en moins de 5 minutes · 7j/7 · 8h–20h
