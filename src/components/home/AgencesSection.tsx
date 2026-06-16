@@ -1,4 +1,5 @@
 ﻿import { AGENCIES, WHATSAPP_URL } from "@/lib/constants";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 function IconPin() {
   return (
@@ -72,14 +73,14 @@ export default function AgencesSection() {
               Hors horaires d&apos;agence, joignez-nous directement sur WhatsApp.
             </p>
           </div>
-          <a
+          <WhatsAppLink
             href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            service="general"
+            location="home_agences"
             className="shrink-0 inline-flex items-center gap-2 bg-whatsapp text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:opacity-90 transition-opacity"
           >
             Écrire maintenant
-          </a>
+          </WhatsAppLink>
         </div>
       </div>
     </section>

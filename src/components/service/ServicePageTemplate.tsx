@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { getWhatsAppUrl } from "@/lib/constants";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 /* ─── Types ─────────────────────────────────────────────────────────────── */
 
@@ -102,15 +103,15 @@ export default function ServicePageTemplate({
 
           {/* CTA hero */}
           <div className="flex flex-wrap items-center gap-4">
-            <a
+            <WhatsAppLink
               href={waUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              service={tarifSlug}
+              location="service_hero"
               className="inline-flex items-center gap-2.5 bg-rouge text-white font-semibold px-7 py-3.5 rounded-full text-sm hover:bg-rouge-fonce active:scale-95 transition-all"
             >
               <IconWhatsApp />
               Commander {name} sur WhatsApp
-            </a>
+            </WhatsAppLink>
             <Link
               href={`/tarifs#${tarifSlug}`}
               className="text-sm font-semibold text-noir underline decoration-noir/30 hover:decoration-noir transition-colors"
@@ -226,15 +227,15 @@ export default function ServicePageTemplate({
 
           {/* Bouton WhatsApp centré */}
           <div className="text-center">
-            <a
+            <WhatsAppLink
               href={waUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              service={tarifSlug}
+              location="service_comment_commander"
               className="inline-flex items-center gap-3 bg-whatsapp text-white font-bold px-8 py-4 rounded-full text-base hover:opacity-90 active:scale-95 transition-all shadow-md"
             >
               <IconWhatsApp />
               Passer commande sur WhatsApp
-            </a>
+            </WhatsAppLink>
             <p className="mt-3 text-gris-texte text-xs">
               Réponse en moins de 5 min · 7j/7 · 24h/24
             </p>
@@ -256,15 +257,15 @@ export default function ServicePageTemplate({
             vous donner un devis précis ou organiser un enlèvement.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
+            <WhatsAppLink
               href={waUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              service={tarifSlug}
+              location="service_cta_final"
               className="inline-flex items-center justify-center gap-2.5 bg-whatsapp text-white font-semibold px-7 py-3.5 rounded-full text-sm hover:opacity-90 active:scale-95 transition-all"
             >
               <IconWhatsApp />
               Écrire sur WhatsApp
-            </a>
+            </WhatsAppLink>
             <Link
               href="/agences"
               className="inline-flex items-center justify-center border-2 border-white/20 text-creme font-semibold px-7 py-3.5 rounded-full text-sm hover:border-white/50 transition-colors"

@@ -2,6 +2,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { getWhatsAppUrl } from "@/lib/constants";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 export const metadata: Metadata = {
   title: "Espace Diaspora — Top Colis Bénin",
@@ -193,17 +194,17 @@ export default function DiasporaPage() {
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-3">
-            <a
+            <WhatsAppLink
               href={getWhatsAppUrl(
                 "Bonjour Top Colis Bénin, Je suis de la diaspora et aimerais en savoir plus sur vos services."
               )}
-              target="_blank"
-              rel="noopener noreferrer"
+              service="diaspora"
+              location="diaspora_hero"
               className="inline-flex items-center justify-center gap-2.5 bg-whatsapp text-white font-bold px-7 py-4 rounded-full text-base hover:opacity-90 active:scale-95 transition-all shadow-sm"
             >
               <IconWhatsApp />
               Nous écrire sur WhatsApp
-            </a>
+            </WhatsAppLink>
             <Link
               href="/devis"
               className="inline-flex items-center justify-center border-2 border-noir text-noir font-semibold px-7 py-4 rounded-full text-base hover:bg-noir hover:text-creme active:scale-95 transition-all"
@@ -334,15 +335,15 @@ export default function DiasporaPage() {
 
                 {/* Actions */}
                 <div className="flex flex-col sm:flex-row gap-2 pt-1">
-                  <a
+                  <WhatsAppLink
                     href={getWhatsAppUrl(u.waMessage)}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    service="diaspora"
+                    location={`diaspora_univers_${u.title}`}
                     className="inline-flex items-center justify-center gap-2 bg-whatsapp text-white text-xs font-semibold px-4 py-2.5 rounded-full hover:opacity-90 active:scale-95 transition-all"
                   >
                     <IconWhatsApp />
                     Commander
-                  </a>
+                  </WhatsAppLink>
                   <Link
                     href={u.href}
                     className="inline-flex items-center justify-center text-xs font-semibold text-rouge border border-rouge/30 px-4 py-2.5 rounded-full hover:bg-rouge/5 transition-all"
@@ -412,17 +413,17 @@ export default function DiasporaPage() {
             Quel que soit votre pays, un message WhatsApp suffit pour prendre
             soin de ceux que vous aimez au Bénin.
           </p>
-          <a
+          <WhatsAppLink
             href={getWhatsAppUrl(
               "Bonjour Top Colis Bénin, Je suis de la diaspora et voudrais utiliser vos services pour mes proches au Bénin."
             )}
-            target="_blank"
-            rel="noopener noreferrer"
+            service="diaspora"
+            location="diaspora_cta_final"
             className="inline-flex items-center gap-2.5 bg-whatsapp text-white font-bold px-8 py-4 rounded-full text-base hover:opacity-90 active:scale-95 transition-all shadow-lg"
           >
             <IconWhatsApp />
             Écrire à Top Colis Bénin maintenant
-          </a>
+          </WhatsAppLink>
           <p className="mt-4 text-creme/40 text-xs">
             Réponse en moins de 5 minutes · 7j/7 · 8h–20h
           </p>

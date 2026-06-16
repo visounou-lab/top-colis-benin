@@ -1,5 +1,6 @@
 ﻿import Link from "next/link";
 import { AGENCIES, NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 function IconPin({ className }: { className?: string }) {
   return (
@@ -37,14 +38,14 @@ export default function Footer() {
             <p className="mt-3 text-sm text-gris-texte leading-relaxed">
               Votre partenaire de livraison express au Bénin. Rapide, fiable et accessible.
             </p>
-            <a
+            <WhatsAppLink
               href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              service="general"
+              location="footer"
               className="mt-5 inline-flex items-center gap-2 bg-whatsapp text-white text-sm font-semibold px-4 py-2 rounded-full hover:opacity-90 transition-opacity"
             >
               Commander
-            </a>
+            </WhatsAppLink>
           </div>
 
           {/* Colonne 2 — Nos agences */}

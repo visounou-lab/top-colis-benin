@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { getWhatsAppUrl } from "@/lib/constants";
 
 /* ─── Types ──────────────────────────────────────────────────────────────── */
@@ -192,6 +193,7 @@ export default function DevisForm() {
 
     const message = buildMessage(data);
     const url = getWhatsAppUrl(message);
+    track("whatsapp_click", { service: "devis_form", location: "devis_page" });
     window.open(url, "_blank", "noopener,noreferrer");
   };
 

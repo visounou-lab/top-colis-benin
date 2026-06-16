@@ -2,6 +2,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { getWhatsAppUrl, SERVICE_WHATSAPP_MESSAGES } from "@/lib/constants";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 export const metadata: Metadata = {
   title: "Tarifs — Top Colis Bénin",
@@ -359,15 +360,15 @@ export default function TarifsPage() {
 
               {/* CTA de commande directe */}
               <div className="border-t border-border px-6 py-4">
-                <a
+                <WhatsAppLink
                   href={getWhatsAppUrl(SERVICE_WHATSAPP_MESSAGES[service.slug])}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  service={service.slug}
+                  location="tarifs_card"
                   className="inline-flex items-center gap-2 bg-whatsapp text-white font-semibold px-5 py-2.5 rounded-full text-sm hover:opacity-90 active:scale-95 transition-all"
                 >
                   <IconWhatsApp />
                   Commander {service.name} sur WhatsApp
-                </a>
+                </WhatsAppLink>
               </div>
             </article>
           ))}
@@ -516,17 +517,17 @@ export default function TarifsPage() {
             exact et sans frais cachés en moins de 5 minutes.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <a
+            <WhatsAppLink
               href={getWhatsAppUrl(
                 "Bonjour Top Colis Bénin, je souhaite obtenir un devis précis pour l'un de vos services. Pouvez-vous m'aider ?"
               )}
-              target="_blank"
-              rel="noopener noreferrer"
+              service="general"
+              location="tarifs_bottom"
               className="inline-flex items-center justify-center gap-2.5 bg-whatsapp text-white font-bold px-7 py-4 rounded-full text-base hover:opacity-90 active:scale-95 transition-all shadow-sm"
             >
               <IconWhatsApp />
               Demander un devis sur WhatsApp
-            </a>
+            </WhatsAppLink>
             <Link
               href="/devis"
               className="inline-flex items-center justify-center border-2 border-noir text-noir font-semibold px-7 py-4 rounded-full text-base hover:bg-noir hover:text-creme active:scale-95 transition-all"

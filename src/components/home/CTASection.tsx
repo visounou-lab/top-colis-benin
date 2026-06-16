@@ -1,4 +1,5 @@
 import { WHATSAPP_URL } from "@/lib/constants";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 function IconWhatsApp() {
   return (
@@ -24,15 +25,15 @@ export default function CTASection() {
           en quelques minutes — même les jours fériés.
         </p>
 
-        <a
+        <WhatsAppLink
           href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+          service="general"
+          location="home_cta_final"
           className="inline-flex items-center gap-3 bg-white text-rouge font-bold px-8 py-4 rounded-full text-base hover:bg-creme active:scale-95 transition-all shadow-lg"
         >
           <IconWhatsApp />
           Commander sur WhatsApp
-        </a>
+        </WhatsAppLink>
 
         <p className="mt-5 text-white/60 text-xs">
           Réponse en moins de 5 minutes · Disponible 24h/24

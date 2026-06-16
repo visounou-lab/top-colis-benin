@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { getWhatsAppUrl } from "@/lib/constants";
 
 type FormData = { nom: string; sujet: string; message: string };
@@ -85,6 +86,7 @@ export default function ContactForm() {
     const errs = validate(data);
     setErrors(errs);
     if (Object.keys(errs).length > 0) return;
+    track("whatsapp_click", { service: "contact_form", location: "contact_page" });
     window.open(getWhatsAppUrl(buildMessage(data)), "_blank", "noopener,noreferrer");
   };
 

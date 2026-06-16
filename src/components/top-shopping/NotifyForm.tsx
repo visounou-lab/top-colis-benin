@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { getWhatsAppUrl } from "@/lib/constants";
 
 function buildMessage(contact: string): string {
@@ -30,6 +31,7 @@ export default function NotifyForm() {
       return;
     }
     setError("");
+    track("whatsapp_click", { service: "top_shopping", location: "notify_form" });
     window.open(getWhatsAppUrl(buildMessage(contact)), "_blank", "noopener,noreferrer");
   };
 

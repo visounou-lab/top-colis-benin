@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { NAV_LINKS, WHATSAPP_URL } from "@/lib/constants";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 function IconWhatsApp({ className }: { className?: string }) {
   return (
@@ -66,15 +67,15 @@ export default function Header() {
         </nav>
 
         {/* Bouton WhatsApp desktop */}
-        <a
+        <WhatsAppLink
           href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
+          service="general"
+          location="header_desktop"
           className="hidden md:flex items-center gap-2 bg-whatsapp text-white text-sm font-semibold px-4 py-2 rounded-full hover:opacity-90 active:scale-95 transition-all"
         >
           <IconWhatsApp className="w-4 h-4 shrink-0" />
           Commander
-        </a>
+        </WhatsAppLink>
 
         {/* Bouton hamburger mobile */}
         <button
@@ -108,15 +109,15 @@ export default function Header() {
             ))}
           </nav>
           <div className="px-4 pb-4 pt-2">
-            <a
+            <WhatsAppLink
               href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              service="general"
+              location="header_mobile"
               className="flex items-center justify-center gap-2 bg-whatsapp text-white text-sm font-semibold w-full py-3 rounded-full hover:opacity-90 transition-opacity"
             >
               <IconWhatsApp className="w-4 h-4 shrink-0" />
               Commander via WhatsApp
-            </a>
+            </WhatsAppLink>
           </div>
         </div>
       )}

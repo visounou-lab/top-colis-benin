@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { WHATSAPP_URL } from "@/lib/constants";
 import ContactForm from "@/components/contact/ContactForm";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 export const metadata: Metadata = {
   title: "Contact — Top Colis Bénin",
@@ -88,10 +89,10 @@ export default function ContactPage() {
           <div className="space-y-8">
 
             {/* Gros bouton WhatsApp */}
-            <a
+            <WhatsAppLink
               href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              service="general"
+              location="contact_page"
               className="flex items-center gap-4 bg-whatsapp text-white font-bold px-7 py-5 rounded-2xl hover:opacity-90 active:scale-95 transition-all shadow-md"
             >
               <span className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center shrink-0">
@@ -101,7 +102,7 @@ export default function ContactPage() {
                 <p className="text-base font-bold leading-tight">Écrire sur WhatsApp</p>
                 <p className="text-white/80 text-sm font-normal">Réponse en moins de 5 minutes</p>
               </div>
-            </a>
+            </WhatsAppLink>
 
             {/* Numéro de téléphone */}
             <div className="bg-creme rounded-2xl border border-border px-6 py-5 flex items-center gap-4">

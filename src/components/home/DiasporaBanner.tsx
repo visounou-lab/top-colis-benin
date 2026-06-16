@@ -1,4 +1,5 @@
 ﻿import { WHATSAPP_URL } from "@/lib/constants";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 const features = [
   {
@@ -80,14 +81,14 @@ export default function DiasporaBanner() {
 
         {/* CTA */}
         <div className="text-center">
-          <a
+          <WhatsAppLink
             href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            service="diaspora"
+            location="home_diaspora_banner"
             className="inline-flex items-center gap-2 bg-or text-noir font-semibold px-7 py-3.5 rounded-full text-sm hover:opacity-90 active:scale-95 transition-all"
           >
             Nous contacter pour un envoi diaspora
-          </a>
+          </WhatsAppLink>
         </div>
       </div>
     </section>

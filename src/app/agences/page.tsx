@@ -1,6 +1,7 @@
 ﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { getWhatsAppUrl, WHATSAPP_URL } from "@/lib/constants";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 export const metadata: Metadata = {
   title: "Nos Agences — Top Colis Bénin",
@@ -171,15 +172,15 @@ export default function AgencesPage() {
                 </div>
 
                 {/* Bouton WhatsApp */}
-                <a
+                <WhatsAppLink
                   href={getWhatsAppUrl(ag.waMessage)}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  service="general"
+                  location={`agences_card_${ag.city}`}
                   className="mt-auto inline-flex items-center justify-center gap-2 bg-whatsapp text-white text-sm font-semibold px-5 py-3 rounded-full hover:opacity-90 active:scale-95 transition-all"
                 >
                   <IconWhatsApp />
                   Contacter cette agence
-                </a>
+                </WhatsAppLink>
               </article>
             ))}
           </div>
@@ -231,15 +232,15 @@ export default function AgencesPage() {
             Écrivez-nous sur WhatsApp, nous vous guidons jusqu&apos;à l&apos;agence la plus
             proche de vous.
           </p>
-          <a
+          <WhatsAppLink
             href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            service="general"
+            location="agences_bottom"
             className="inline-flex items-center gap-2.5 bg-whatsapp text-white font-bold px-7 py-4 rounded-full text-base hover:opacity-90 active:scale-95 transition-all"
           >
             <IconWhatsApp />
             Nous écrire sur WhatsApp
-          </a>
+          </WhatsAppLink>
         </div>
       </section>
     </>
