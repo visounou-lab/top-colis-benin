@@ -122,13 +122,60 @@ const TARIFS: ServiceTarif[] = [
 
 /* Tarifs internationaux — modifiez les lignes ci-dessous */
 
-type ZoneRow = { zone: string; pays: string; price: string; delai: string };
+type DestinationRow = { label: string; price: string; isContact?: boolean };
 
-const ZONES_INTERNATIONAL: ZoneRow[] = [
-  { zone: "Zone 1", pays: "France, Belgique, Italie, Allemagne…", price: "5 000 FCFA / kg", delai: "7 – 14 jours" },
-  { zone: "Zone 2", pays: "Canada, États-Unis", price: "6 500 FCFA / kg", delai: "10 – 21 jours" },
-  { zone: "Zone 3", pays: "RD Congo (express)", price: "3 500 FCFA / kg", delai: "Dès 72 h" },
-  { zone: "Zone 4", pays: "Reste de l'Afrique", price: "4 000 FCFA / kg", delai: "5 – 10 jours" },
+type Region = {
+  name: string;
+  badge: string;
+  accentBg: string;
+  accentText: string;
+  rows: DestinationRow[];
+  delai: string;
+};
+
+const REGIONS_INTERNATIONAL: Region[] = [
+  {
+    name: "RD Congo",
+    badge: "USD / kg",
+    accentBg: "bg-rouge/8",
+    accentText: "text-rouge",
+    rows: [
+      { label: "Kinshasa", price: "9 $/kg" },
+      { label: "Lubumbashi", price: "11 $/kg" },
+      { label: "Kolwezi", price: "12 $/kg" },
+      { label: "Bukavu", price: "13 $/kg" },
+      { label: "Likasi", price: "13 $/kg" },
+      { label: "Goma", price: "13 $/kg" },
+      { label: "Autre ville en RDC", price: "Contactez le service client", isContact: true },
+    ],
+    delai: "Délai : dès 72 h",
+  },
+  {
+    name: "Afrique",
+    badge: "USD ou FCFA / kg",
+    accentBg: "bg-or/8",
+    accentText: "text-or",
+    rows: [
+      { label: "Afrique du Sud", price: "22 $/kg" },
+      { label: "Brazzaville (Congo)", price: "4 000 FCFA/kg" },
+      { label: "Pointe-Noire (Congo)", price: "4 000 FCFA/kg" },
+      { label: "Reste de l'Afrique", price: "4 000 FCFA/kg" },
+    ],
+    delai: "Délai communiqué à la commande",
+  },
+  {
+    name: "Europe",
+    badge: "EUR / kg",
+    accentBg: "bg-rouge/8",
+    accentText: "text-rouge",
+    rows: [
+      { label: "France", price: "15 €/kg" },
+      { label: "Allemagne", price: "20 €/kg" },
+      { label: "Belgique", price: "20 €/kg" },
+      { label: "Autre destination en Europe", price: "Contactez le service client", isContact: true },
+    ],
+    delai: "Délai communiqué à la commande",
+  },
 ];
 
 const POIDS_MIN_INTERNATIONAL = "1 kg";
@@ -337,29 +384,49 @@ export default function TarifsPage() {
             </div>
           </div>
 
-          {/* Tableau des zones */}
-          <div className="rounded-3xl border border-border overflow-hidden mb-6">
-            {/* En-tête tableau */}
-            <div className="grid grid-cols-12 bg-noir text-creme text-xs font-semibold uppercase tracking-widest px-6 py-3">
-              <span className="col-span-2">Zone</span>
-              <span className="col-span-5">Destination</span>
-              <span className="col-span-3 text-right">Tarif / kg</span>
-              <span className="col-span-2 text-right">Délai</span>
-            </div>
-            {/* Lignes */}
-            <div className="divide-y divide-border">
-              {ZONES_INTERNATIONAL.map((z, i) => (
-                <div
-                  key={z.zone}
-                  className={`grid grid-cols-12 items-center px-6 py-4 ${i % 2 === 0 ? "bg-white" : "bg-creme/40"} hover:bg-or/5 transition-colors`}
-                >
-                  <span className="col-span-2 text-xs font-bold text-or">{z.zone}</span>
-                  <span className="col-span-5 text-sm text-noir">{z.pays}</span>
-                  <span className="col-span-3 text-right text-sm font-bold text-rouge">{z.price}</span>
-                  <span className="col-span-2 text-right text-xs text-gris-texte">{z.delai}</span>
+          {/* Grille des régions */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            {REGIONS_INTERNATIONAL.map((region) => (
+              <article
+                key={region.name}
+                className="rounded-3xl border border-border overflow-hidden bg-white flex flex-col"
+              >
+                {/* En-tête région */}
+                <div className={`px-6 py-4 ${region.accentBg} border-b border-border flex items-center justify-between gap-3`}>
+                  <h3 className="font-heading text-lg font-bold text-noir">{region.name}</h3>
+                  <span className={`text-xs font-semibold ${region.accentText}`}>{region.badge}</span>
                 </div>
-              ))}
-            </div>
+                {/* Lignes destinations */}
+                <div className="divide-y divide-border flex-1">
+                  {region.rows.map((row) => (
+                    <div
+                      key={row.label}
+                      className="flex items-center justify-between gap-3 px-6 py-3"
+                    >
+                      <span className="text-sm text-noir">{row.label}</span>
+                      <span
+                        className={`text-sm font-bold shrink-0 text-right ${row.isContact ? "text-gris-texte text-xs" : region.accentText}`}
+                      >
+                        {row.price}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                {/* Délai région */}
+                <div className="px-6 py-3 bg-creme/60 border-t border-border">
+                  <p className="text-xs text-gris-texte font-medium">{region.delai}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* Mention destinations non listées */}
+          <div className="bg-rouge/8 border border-rouge/20 rounded-2xl px-5 py-4 flex items-start gap-3 mb-6">
+            <span className="text-rouge mt-0.5"><IconInfo /></span>
+            <p className="text-sm text-noir leading-relaxed">
+              <strong>Autre destination non listée</strong> (Canada, États-Unis, etc.) : contactez
+              notre service client pour un devis.
+            </p>
           </div>
 
           {/* Notes international */}
