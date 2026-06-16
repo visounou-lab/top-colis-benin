@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFAB from "@/components/layout/WhatsAppFAB";
+import StructuredData from "@/components/StructuredData";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -46,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`${fraunces.variable} ${inter.variable} antialiased flex flex-col min-h-screen`}>
+        <StructuredData />
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />

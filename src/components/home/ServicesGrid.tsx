@@ -140,8 +140,9 @@ export default function ServicesGrid() {
 
               {/* Flèche */}
               <div className="mt-auto">
-                <span className="text-xs font-semibold text-rouge opacity-0 group-hover:opacity-100 transition-opacity">
-                  En savoir plus →
+                <span className="text-xs font-semibold text-rouge inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                  En savoir plus
+                  <span aria-hidden="true">→</span>
                 </span>
               </div>
             </Link>
