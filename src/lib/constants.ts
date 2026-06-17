@@ -12,6 +12,7 @@ export const NAV_LINKS: { label: string; href: string; badge?: string }[] = [
   { label: "Diaspora", href: "/diaspora" },
   { label: "Agences", href: "/agences" },
   { label: "Tarifs", href: "/tarifs" },
+  { label: "FAQ", href: "/faq" },
   { label: "Top Shopping", href: "/top-shopping", badge: "Bientôt" },
 ];
 
