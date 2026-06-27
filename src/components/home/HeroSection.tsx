@@ -75,7 +75,7 @@ export default function HeroSection() {
 
           <div className="hero-rider relative z-10 w-[118%] max-w-none sm:w-[105%] lg:w-[112%]">
             <Image
-              src="/images/delivery-rider-3d.png"
+              src="/images/delivery-rider-3d-v2.png"
               alt="Livreur Top Colis Bénin sur une moto rouge"
               width={1536}
               height={1024}
