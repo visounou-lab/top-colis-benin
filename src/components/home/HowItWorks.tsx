@@ -1,86 +1,52 @@
+import { Check, MapPin, MessageCircleMore, PackageCheck } from "lucide-react";
+
 const steps = [
   {
     num: "01",
-    title: "Dites-nous votre besoin",
-    description:
-      "Envoyez un message WhatsApp — texte ou vocal. Nous répondons en quelques minutes, 7j/7.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
-        <line x1="9" y1="10" x2="15" y2="10" />
-        <line x1="9" y1="14" x2="13" y2="14" />
-      </svg>
-    ),
+    title: "Vous écrivez",
+    description: "Texte, photo ou vocal sur WhatsApp : dites-nous simplement ce qu’il vous faut.",
+    icon: MessageCircleMore,
   },
   {
     num: "02",
-    title: "On s'occupe de tout",
-    description:
-      "Collecte, achat au marché ou en pharmacie, préparation et emballage selon votre commande.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <polyline points="9 11 12 14 22 4" />
-        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-      </svg>
-    ),
+    title: "On organise",
+    description: "Prix confirmé, livreur affecté et collecte préparée sans paperasse inutile.",
+    icon: PackageCheck,
   },
   {
     num: "03",
-    title: "Livraison à domicile",
-    description:
-      "Rapide, suivie et confirmée sur WhatsApp. Vous payez à la réception — zéro stress.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 8v4l3 3" />
-      </svg>
-    ),
+    title: "Vous recevez",
+    description: "Vous suivez l’avancement et recevez une confirmation dès la livraison.",
+    icon: MapPin,
   },
 ];
 
 export default function HowItWorks() {
   return (
-    <section className="bg-creme px-4 py-16 sm:py-20" aria-labelledby="how-heading">
-      <div className="max-w-5xl mx-auto">
-
-        {/* En-tête */}
-        <div className="text-center mb-10 sm:mb-14">
-          <p className="text-rouge text-xs font-semibold uppercase tracking-widest mb-3">
-            Simple &amp; rapide
-          </p>
-          <h2 id="how-heading" className="font-heading text-3xl sm:text-4xl font-bold text-noir">
-            Comment ça marche ?
+    <section className="relative overflow-hidden bg-creme px-4 py-20 sm:py-28" aria-labelledby="how-heading">
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_center,rgba(226,35,26,.08),transparent_65%)]" />
+      <div className="relative mx-auto max-w-7xl">
+        <div className="mb-12 text-center">
+          <p className="mb-3 text-xs font-extrabold uppercase tracking-[.2em] text-rouge">3 étapes. Zéro stress.</p>
+          <h2 id="how-heading" className="text-4xl font-black tracking-tight text-noir sm:text-6xl">
+            Aussi simple qu’un message.
           </h2>
         </div>
 
-        {/* Étapes */}
-        <ol className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {steps.map((step) => (
-            <li
-              key={step.num}
-              className="relative bg-white rounded-3xl border border-border p-7 flex flex-col gap-5"
-            >
-              {/* Numéro + icône */}
-              <div className="flex items-center gap-4">
-                <span
-                  className="font-heading text-4xl font-bold text-rouge/20 leading-none select-none"
-                  aria-hidden="true"
-                >
-                  {step.num}
+        <ol className="relative grid gap-5 md:grid-cols-3">
+          <div className="absolute left-[16%] right-[16%] top-14 hidden border-t-2 border-dashed border-rouge/25 md:block" aria-hidden="true" />
+          {steps.map(({ num, title, description, icon: Icon }) => (
+            <li key={num} className="group relative rounded-[2rem] border border-noir/8 bg-white p-7 shadow-[0_18px_60px_rgba(26,23,20,.06)] transition duration-500 hover:-translate-y-2">
+              <div className="relative z-10 mb-8 flex items-center justify-between">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-rouge text-white shadow-[0_12px_28px_rgba(226,35,26,.2)] transition-transform group-hover:rotate-6">
+                  <Icon className="h-6 w-6" />
                 </span>
-                <div className="w-10 h-10 rounded-xl bg-rouge/10 text-rouge flex items-center justify-center shrink-0">
-                  <div className="w-5 h-5">{step.icon}</div>
-                </div>
+                <span className="text-5xl font-black text-noir/8">{num}</span>
               </div>
-
-              {/* Contenu */}
-              <div>
-                <h3 className="font-heading font-bold text-noir text-lg mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-gris-texte text-sm leading-relaxed">
-                  {step.description}
-                </p>
+              <h3 className="text-2xl font-black text-noir">{title}</h3>
+              <p className="mt-3 text-sm font-medium leading-relaxed text-gris-texte">{description}</p>
+              <div className="mt-7 flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-rouge">
+                <Check className="h-4 w-4" /> C’est parti
               </div>
             </li>
           ))}

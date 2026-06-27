@@ -166,6 +166,15 @@
   100% { opacity: 0; transform: translateX(-80px) scaleX(1.15); }
 }
 
+@keyframes orbit-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes plane-bob {
+  0%, 100% { transform: translate(-4px, 3px) rotate(-4deg); }
+  50% { transform: translate(12px, -12px) rotate(5deg); }
+}
+
 .hero-stage {
   background:
     radial-gradient(circle at 12% 18%, rgb(227 162 26 / .13), transparent 24rem),
@@ -230,6 +239,21 @@
 .speed-line-two { left: 0; bottom: 24%; width: 90px; animation-delay: .45s; }
 .speed-line-three { left: 13%; bottom: 19%; width: 120px; animation-delay: .9s; }
 
+.diaspora-grid {
+  background-image:
+    radial-gradient(circle, rgb(255 255 255 / .16) 1px, transparent 1.5px);
+  background-size: 24px 24px;
+  mask-image: radial-gradient(circle at 75% 50%, black, transparent 65%);
+}
+
+.diaspora-spin { animation: orbit-spin 24s linear infinite; }
+.diaspora-plane { animation: plane-bob 5s ease-in-out infinite; }
+
+.service-card,
+.agency-card {
+  animation: hero-copy-in .65s cubic-bezier(.2,.8,.2,1) both;
+}
+
 @media (max-width: 1023px) {
   .hero-grid { mask-image: linear-gradient(to bottom, black, transparent 85%); }
   .hero-copy { text-align: center; margin-inline: auto; }
@@ -250,6 +274,12 @@
   .hero-float-card,
   .hero-float-card-delay,
   .speed-line {
+    animation: none !important;
+  }
+  .diaspora-spin,
+  .diaspora-plane,
+  .service-card,
+  .agency-card {
     animation: none !important;
   }
 }

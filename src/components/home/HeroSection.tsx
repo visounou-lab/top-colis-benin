@@ -15,9 +15,9 @@ export default function HeroSection() {
       <div className="hero-orb hero-orb-one pointer-events-none absolute" aria-hidden="true" />
       <div className="hero-orb hero-orb-two pointer-events-none absolute" aria-hidden="true" />
 
-      <div className="relative mx-auto grid min-h-[calc(100svh-4rem)] max-w-7xl items-center gap-10 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-4 lg:py-16">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-1 py-8 sm:gap-6 sm:py-12 lg:min-h-[calc(100svh-4rem)] lg:grid-cols-[0.9fr_1.1fr] lg:gap-4 lg:py-16">
         <div className="z-10 max-w-2xl hero-copy">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-rouge/15 bg-white/75 px-3 py-2 text-[11px] font-bold uppercase tracking-[0.16em] text-rouge shadow-sm backdrop-blur">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-rouge/15 bg-white/75 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.13em] text-rouge shadow-sm backdrop-blur sm:mb-6 sm:text-[11px] sm:tracking-[0.16em]">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-rouge opacity-60" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-rouge" />
@@ -25,7 +25,7 @@ export default function HeroSection() {
             Livraison active 7j/7 au Bénin
           </div>
 
-          <h1 className="max-w-[780px] text-[clamp(3.25rem,7vw,6.8rem)] font-black leading-[0.86] tracking-[-0.065em] text-noir">
+          <h1 className="max-w-[780px] text-[clamp(2.8rem,13vw,6.8rem)] font-black leading-[0.86] tracking-[-0.065em] text-noir">
             On prend.
             <br />
             On roule.
@@ -38,28 +38,28 @@ export default function HeroSection() {
             </span>
           </h1>
 
-          <p className="mt-9 max-w-xl text-base font-medium leading-relaxed text-gris-texte sm:text-lg">
+          <p className="mt-7 max-w-xl text-sm font-medium leading-relaxed text-gris-texte sm:mt-9 sm:text-lg">
             Colis, courses, médicaments ou repas : une équipe locale,
             un suivi WhatsApp et la tranquillité jusqu&apos;à destination.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row">
             <Link
               href="/devis"
-              className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-rouge px-7 text-sm font-bold text-white shadow-[0_14px_35px_rgba(226,35,26,0.25)] transition hover:-translate-y-1 hover:bg-rouge-fonce"
+              className="group inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-rouge px-7 text-sm font-bold text-white shadow-[0_14px_35px_rgba(226,35,26,0.25)] transition hover:-translate-y-1 hover:bg-rouge-fonce sm:min-h-14"
             >
               Demander un devis
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
               href="/services"
-              className="inline-flex min-h-14 items-center justify-center rounded-full border border-noir/15 bg-white/70 px-7 text-sm font-bold text-noir backdrop-blur transition hover:-translate-y-1 hover:border-noir/30 hover:bg-white"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-noir/15 bg-white/70 px-7 text-sm font-bold text-noir backdrop-blur transition hover:-translate-y-1 hover:border-noir/30 hover:bg-white sm:min-h-14"
             >
               Découvrir nos services
             </Link>
           </div>
 
-          <div className="mt-9 flex flex-wrap gap-x-5 gap-y-3">
+          <div className="mt-6 flex flex-wrap gap-x-4 gap-y-2 sm:mt-9 sm:gap-x-5 sm:gap-y-3">
             {proofPoints.map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2 text-xs font-semibold text-noir/70">
                 <Icon className="h-4 w-4 text-rouge" />
@@ -69,7 +69,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto flex min-h-[430px] w-full max-w-[760px] items-center justify-center lg:min-h-[660px]">
+        <div className="relative mx-auto flex min-h-[305px] w-full max-w-[760px] items-center justify-center sm:min-h-[450px] lg:min-h-[660px]">
           <div className="hero-sun absolute h-[78%] w-[78%] rounded-full bg-rouge" aria-hidden="true" />
           <div className="absolute right-[2%] top-[13%] h-20 w-20 rounded-[2rem] border border-white/50 bg-white/25 backdrop-blur-sm sm:h-28 sm:w-28" aria-hidden="true" />
 
