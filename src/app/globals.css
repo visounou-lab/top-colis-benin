@@ -138,3 +138,118 @@
     font-family: var(--font-heading);
   }
 }
+
+@keyframes hero-copy-in {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hero-ride-in {
+  0% { opacity: 0; transform: translateX(28%) rotate(2deg) scale(.9); }
+  70% { opacity: 1; transform: translateX(-2%) rotate(-1deg) scale(1.02); }
+  100% { opacity: 1; transform: translateX(0) rotate(0) scale(1); }
+}
+
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+@keyframes hero-float-delay {
+  0%, 100% { transform: translateY(0) rotate(1deg); }
+  50% { transform: translateY(10px) rotate(-1deg); }
+}
+
+@keyframes line-speed {
+  0% { opacity: 0; transform: translateX(60px) scaleX(.4); }
+  35% { opacity: .75; }
+  100% { opacity: 0; transform: translateX(-80px) scaleX(1.15); }
+}
+
+.hero-stage {
+  background:
+    radial-gradient(circle at 12% 18%, rgb(227 162 26 / .13), transparent 24rem),
+    linear-gradient(135deg, #fffaf3 0%, #fbf6ee 48%, #f6ecdd 100%);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(rgb(26 23 20 / .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(26 23 20 / .035) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to right, black, transparent 70%);
+}
+
+.hero-orb {
+  border-radius: 999px;
+  filter: blur(2px);
+}
+
+.hero-orb-one {
+  width: 10rem;
+  height: 10rem;
+  left: -4rem;
+  bottom: 8%;
+  border: 1.5rem solid rgb(226 35 26 / .06);
+}
+
+.hero-orb-two {
+  width: 3.5rem;
+  height: 3.5rem;
+  left: 43%;
+  top: 15%;
+  background: rgb(227 162 26 / .16);
+}
+
+.hero-copy { animation: hero-copy-in .8s cubic-bezier(.2,.8,.2,1) both; }
+.hero-rider { animation: hero-ride-in 1.05s cubic-bezier(.16,1,.3,1) .1s both; }
+.hero-float-card { animation: hero-float 4.8s ease-in-out 1.1s infinite; }
+.hero-float-card-delay { animation: hero-float-delay 5.3s ease-in-out .5s infinite; }
+
+.hero-sun {
+  background:
+    radial-gradient(circle at 34% 28%, rgb(255 255 255 / .28), transparent 24%),
+    linear-gradient(145deg, #f3493f, #d3160d);
+  box-shadow:
+    0 28px 90px rgb(226 35 26 / .25),
+    inset -22px -22px 50px rgb(130 7 0 / .13),
+    inset 18px 18px 45px rgb(255 255 255 / .12);
+}
+
+.speed-line {
+  position: absolute;
+  z-index: 1;
+  height: 4px;
+  width: 150px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #e3a21a);
+  animation: line-speed 2.2s ease-out infinite;
+}
+
+.speed-line-one { left: 4%; bottom: 29%; }
+.speed-line-two { left: 0; bottom: 24%; width: 90px; animation-delay: .45s; }
+.speed-line-three { left: 13%; bottom: 19%; width: 120px; animation-delay: .9s; }
+
+@media (max-width: 1023px) {
+  .hero-grid { mask-image: linear-gradient(to bottom, black, transparent 85%); }
+  .hero-copy { text-align: center; margin-inline: auto; }
+  .hero-copy p { margin-inline: auto; }
+  .hero-copy > div { justify-content: center; }
+}
+
+@media (max-width: 640px) {
+  .hero-stage { padding-top: .25rem; }
+  .hero-sun { width: 88%; height: 76%; }
+  .hero-float-card { transform: scale(.9); transform-origin: left top; }
+  .hero-float-card-delay { transform: scale(.86); transform-origin: right bottom; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy,
+  .hero-rider,
+  .hero-float-card,
+  .hero-float-card-delay,
+  .speed-line {
+    animation: none !important;
+  }
+}
